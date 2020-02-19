@@ -209,7 +209,7 @@ public class FolhaPagaamento extends javax.swing.JFrame {
         lblInss.setText(String.valueOf(fpm.getInss()));
         lblIrrf.setText(String.valueOf(fpm.getIrrf()));
         lblLiquido.setText(String.valueOf(fpm.getSalarioLiquido()));
-        
+        fpc.salvar();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -242,7 +242,9 @@ public class FolhaPagaamento extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FolhaPagaamento().setVisible(true);
+               FolhaPagaamento fp = new FolhaPagaamento();
+               fp.setVisible(true);
+               fp.setResizable(false);
             }
         });
     }

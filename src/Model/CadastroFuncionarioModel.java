@@ -10,6 +10,7 @@ package Model;
  * @author Natalie
  */
 public class CadastroFuncionarioModel {
+    private static short contador = 0;
     private String nome;
     private String endereco;
     private String cep;
@@ -18,35 +19,67 @@ public class CadastroFuncionarioModel {
     private String cpf;
     private String sexo;
     private String rg;
-    private double matricula;
+    private short matricula;
 
         
-    public CadastroFuncionarioModel(double matricula){
-        this.matricula = matricula;
+    public CadastroFuncionarioModel(){
+        matricula = ++CadastroFuncionarioModel.contador;
+        }
+    public short getMatricula(){
+        return matricula;
     }
+   
     public String getNome(){
-        return this.nome;
+        return nome;
     }
+    public void setNome(String nome){
+         this.nome = nome;
+    }
+ 
     public String getEndereco(){
-        return this.endereco;
+        return endereco;
+    }
+    public void setEndereco(String endereco){
+        this.endereco = endereco;
     }
     public String getComplemento(){
-        return this.complemento;
+        return complemento;
     }
+    public void setComplemento(String complemento){
+        this.complemento = complemento;
+    }
+    
     public String getCep(){
-        return this.cep;
+        return cep;
     }
+    public void setCep(String cpf){
+        this.cep = cep;
+    }
+    
     public String getNumero(){
-        return this.numero;
+        return numero;
+    }
+    public void setNumero(String numero){
+        this.numero = numero;
     }
     public String getSexo(){
-        return this.sexo;
+        return sexo;
+    }
+    public void setSexo(String sexo){
+        this.sexo = sexo;
     }
     public String getCpf(){
-        return this.cpf;
+        return cpf;
+    }
+    public void setCpf(String cpf){
+        this.cpf = cpf;
     }
     public String getRg(){
-        return this.rg;
+        return rg;
     }
+    public void setRg(String rg){
+        this.rg = rg;
+    }
+
       
 }
